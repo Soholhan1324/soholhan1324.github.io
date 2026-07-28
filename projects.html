@@ -40,6 +40,19 @@
             z-index: -1;
         }
 
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('img01.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50%;
+            opacity: 0.08;
+            z-index: -1;
+            pointer-events: none;
+        }
+
         .section-header {
             max-width: 1200px;
             margin: 0 auto 40px;
@@ -184,7 +197,6 @@
         <nav>
             <ul>
                 <li><a href="index.html">MAIN</a></li>
-                <!-- PROJECTS 탭 활성화 -->
                 <li><a href="projects.html" class="active">PROJECTS</a></li>
                 <li><a href="news.html">NEWS</a></li>
                 <li><a href="team.html">TEAM</a></li>
