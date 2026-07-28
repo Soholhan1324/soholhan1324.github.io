@@ -46,37 +46,44 @@
             font-weight: 800;
             color: #003050;
             line-height: 1.4;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             word-break: keep-all;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-role {
+            font-size: 20px;
+            font-weight: 800;
+            color: #4A657A;
+            letter-spacing: 1px;
         }
 
         .contact-email {
             font-size: 56px;
             font-weight: 900;
             color: #003050;
-            text-decoration: none;
-            transition: opacity 0.3s;
             word-break: break-all;
-            display: inline-block;
-            border-bottom: 4px solid #003050;
-            padding-bottom: 5px;
-        }
-
-        .contact-email:hover {
-            opacity: 0.7;
         }
 
         footer { background-color: #003050; color: #FFFFFF; text-align: center; padding: 24px; font-size: 13px; margin-top: auto; }
 
         @media (max-width: 900px) {
             nav ul { gap: 20px; }
-            .contact-slogan { font-size: 28px; margin-bottom: 40px; }
+            .contact-slogan { font-size: 28px; margin-bottom: 50px; }
             .contact-email { font-size: 36px; }
+            .contact-role { font-size: 18px; }
         }
         @media (max-width: 600px) { 
             header { flex-direction: column; gap: 20px; padding: 20px; } 
             .contact-slogan { font-size: 24px; }
-            .contact-email { font-size: 26px; border-bottom: 3px solid #003050; }
+            .contact-email { font-size: 26px; }
+            .contact-role { font-size: 16px; }
         }
     </style>
 </head>
@@ -101,8 +108,12 @@
     </header>
 
     <main class="contact-wrapper">
-        <h1 class="contact-slogan">작은 픽셀 하나에서<br>시작되는 거대한 세계</h1>
-        <a class="contact-email">edelvice1324@naver.com</a>
+        <h1 class="contact-slogan">작은 픽셀 하나에서 시작되는 거대한 세계</h1>
+        
+        <div class="contact-info">
+            <p class="contact-role">CEO: Jung Woojin</p>
+            <p class="contact-email">edelvice1324@naver.com</p>
+        </div>
     </main>
 
     <footer>&copy; 2026 TINY GIANT STUDIO. All rights reserved.</footer>
