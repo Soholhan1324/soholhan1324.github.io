@@ -6,7 +6,7 @@
     <title>TINY GIANT STUDIO - Projects</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; }
-        body { background-color: #F0F4F8; color: #003050; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; position: relative; z-index: 0; }
+        body { background-color: #F0F4F8; color: #003050; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; }
         
         header { background-color: #FFFFFF; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0, 48, 80, 0.05); position: sticky; top: 0; z-index: 100; }
         .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #003050; }
@@ -19,24 +19,23 @@
         nav ul li a:hover { opacity: 0.6; }
         nav ul li a.active { color: #4A657A; border-bottom: 2px solid #003050; }
 
-        .bg-watermark {
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('img01.png');
-            background-repeat: no-repeat;
-            background-position: right -50px bottom -50px;
-            background-size: center;
-            opacity: 0.1;
-            z-index: -1;
-            pointer-events: none;
-        }
-
         .projects-wrapper {
             position: relative;
             flex: 1;
             display: flex;
             flex-direction: column;
             padding: 60px 0 100px;
+        }
+        .projects-wrapper::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('img01.png');
+            background-repeat: no-repeat;
+            background-position: center right;
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
         }
 
         .section-header {
@@ -54,7 +53,6 @@
             padding-bottom: 15px;
         }
 
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -64,7 +62,7 @@
             width: 100%;
             padding: 0 5%;
         }
-        
+
         .project-card {
             background-color: #FFFFFF;
             border-radius: 8px;
@@ -176,8 +174,6 @@
     </style>
 </head>
 <body>
-    <div class="bg-watermark"></div>
-
     <header>
         <a href="index.html" class="logo-container">
             <img src="img02.png" alt="Tiny Giant Logo" class="logo-img">
@@ -208,14 +204,13 @@
                     <span class="placeholder">RTS Artwork 256x256</span>
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title">IMPERIAL PRAETORIUM</h2>
+                    <h2 class="project-title">Sample01</h2>
                     <div class="project-info">
                         <span class="project-tag">Tag: STRATEGY / RTS</span>
                         <span class="project-status">ALPHA DEV</span>
                     </div>
-                    <p class="project-desc">로마 시대를 배경으로 한 실시간 전략 게임. 군단 막사와 프레토리안 가드 등 철저한 고증을 거친 고해상도 픽셀 아트를 기반으로 거대한 전투 시스템을 구현합니다.</p>
+                    <p class="project-desc">sample</p>
                     
-                    <!-- project01.html로 넘어가는 버튼 -->
                     <a href="project01.html" class="btn-details">DETAILS</a>
                 </div>
             </article>
@@ -243,12 +238,12 @@
                     <span class="placeholder">UI Asset 256x256</span>
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title">CRIME SYNDICATE</h2>
+                    <h2 class="project-title">Sample02</h2>
                     <div class="project-info">
                         <span class="project-tag">Tag: STRATEGY / MOBILE</span>
                         <span class="project-status">CONCEPT</span>
                     </div>
-                    <p class="project-desc">조직폭력배 테마의 전략 관리 게임. 폭주족, 깡패 등 다양한 유닛을 육성하고 구역을 관리하는 직관적인 모바일 UI 시스템을 연구 중입니다.</p>
+                    <p class="project-desc">sample</p>
                     <a href="#" class="btn-details">DETAILS</a>
                 </div>
             </article>
@@ -259,12 +254,12 @@
                     <span class="placeholder">Card Concept Art</span>
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title">CULINARY BATTLE</h2>
+                    <h2 class="project-title">Sample03</h2>
                     <div class="project-info">
                         <span class="project-tag">Tag: CARD BATTLE / ROGUELIKE</span>
                         <span class="project-status">DESIGN</span>
                     </div>
-                    <p class="project-desc">염도(물과 소금) 시스템과 행동력(AP)을 관리하는 요리 카드 배틀 로그라이크. 심사위원의 기준을 만족시키는 정교한 수치 계산 로직이 특징입니다.</p>
+                    <p class="project-desc">sample</p>
                     <a href="#" class="btn-details">DETAILS</a>
                 </div>
             </article>
